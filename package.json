@@ -35,6 +35,8 @@
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
     "ember-maybe-import-regenerator": "^0.1.6",
+    "ember-mobiledoc-dom-renderer": "^0.6.0",
+    "ember-mobiledoc-text-renderer": "^0.3.2",
     "ember-resolver": "^4.0.0",
     "ember-source": "~3.1.0",
     "eslint-plugin-ember": "^5.0.0",

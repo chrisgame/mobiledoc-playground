@@ -5,4 +5,18 @@
 
 .editor {
   display: flex;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.rendered-output {
+  display: flex;
+}
+
+.rendered-output .output {
+  flex-grow: 1;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
 }
