@@ -1,7 +1,29 @@
 <div class="playground">
   <div class="editor">
-    {{#mobiledoc-editor as |editor|}}
+    {{#mobiledoc-editor
+      mobiledoc=mobiledocExample
+      on-change=(action 'mobiledocWasUpdated')
+      as |editor|}}
       {{mobiledoc-toolbar editor=editor}}
     {{/mobiledoc-editor}}
+  </div>
+
+  <div class="rendered-output">
+    <div class="output">
+      <h1>Raw</h1>
+      {{as-json mobiledocExample}}
+    </div>
+
+    <div class="output">
+      <h1>Dom</h1>
+      {{#if mobiledocExample}}
+        {{render-mobiledoc mobiledoc=mobiledocExample}}
+      {{/if}}
+    </div>
+
+    <div class="output">
+      <h1>Text</h1>
+      {{mobiledocExampleInText}}
+    </div>
   </div>
 </div>
