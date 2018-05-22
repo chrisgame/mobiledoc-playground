@@ -2,9 +2,35 @@
   <div class="editor">
     {{#mobiledoc-editor
       mobiledoc=mobiledocExample
+      did-create-editor=(action 'mobiledocEditorWasCreated')
       on-change=(action 'mobiledocWasUpdated')
       as |editor|}}
       {{mobiledoc-toolbar editor=editor}}
+      {{#if textSelected}}
+        {{#mobiledoc-markup-button editor=editor for="b"}}
+          Bold
+        {{/mobiledoc-markup-button}}
+        {{#mobiledoc-markup-button editor=editor for="em"}}
+          Italic
+        {{/mobiledoc-markup-button}}
+        {{mobiledoc-link-button editor=editor}}
+      {{/if}}
+
+      {{#mobiledoc-section-button editor=editor for="h1"}}
+        Heading
+      {{/mobiledoc-section-button}}
+      {{#mobiledoc-section-button editor=editor for="h2"}}
+        Subheading
+      {{/mobiledoc-section-button}}
+      {{#mobiledoc-section-button editor=editor for="blockquote"}}
+        Blockquote
+      {{/mobiledoc-section-button}}
+      {{#mobiledoc-section-button editor=editor for="ul"}}
+        Unordered List
+      {{/mobiledoc-section-button}}
+      {{#mobiledoc-section-button editor=editor for="ol"}}
+        Ordered List
+      {{/mobiledoc-section-button}}
     {{/mobiledoc-editor}}
   </div>
 
