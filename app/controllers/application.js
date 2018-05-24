@@ -6,6 +6,20 @@ export default Controller.extend({
   mobiledocExample: null,
   textSelected: false,
 
+  init() {
+    this._super(...arguments);
+    this.set(
+      'mobiledocExample',
+      {
+        "version": "0.3.1",
+        "atoms": [],
+        "cards": [],
+        "markups": [],
+        "sections": [[1,"p",[]]]
+      }
+    );
+  },
+
   mobiledocExampleInText: computed('mobiledocExample', function() {
     let mobiledocExample = this.get('mobiledocExample');
     let renderer = new Renderer();
