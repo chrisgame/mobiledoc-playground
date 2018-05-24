@@ -7,6 +7,20 @@ export default Controller.extend({
   mobiledocExample: null,
   textSelected: false,
 
+  init() {
+    this._super(...arguments);
+    this.set(
+      'mobiledocExample',
+      {
+        "version": "0.3.1",
+        "atoms": [],
+        "cards": [],
+        "markups": [],
+        "sections": [[1,"p",[]]]
+      }
+    );
+  },
+
   cards: computed(function() {
     return [
       createComponentCard('mobiledoc-image-upload-card')
