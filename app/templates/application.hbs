@@ -2,6 +2,7 @@
   <div class="editor">
     {{#mobiledoc-editor
       mobiledoc=mobiledocExample
+      cards=cards
       did-create-editor=(action 'mobiledocEditorWasCreated')
       on-change=(action 'mobiledocWasUpdated')
       as |editor|}}
@@ -31,6 +32,9 @@
       {{#mobiledoc-section-button editor=editor for="ol"}}
         Ordered List
       {{/mobiledoc-section-button}}
+      {{#mobiledoc-image-button editor=editor}}
+        Image
+      {{/mobiledoc-image-button}}
     {{/mobiledoc-editor}}
   </div>
 
@@ -43,7 +47,9 @@
     <div class="output">
       <h1>Dom</h1>
       {{#if mobiledocExample}}
-        {{render-mobiledoc mobiledoc=mobiledocExample}}
+        {{render-mobiledoc
+          mobiledoc=mobiledocExample
+          cardNames=cardNames}}
       {{/if}}
     </div>
 
