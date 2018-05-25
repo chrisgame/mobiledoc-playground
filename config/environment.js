@@ -20,7 +20,11 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    BUCKET_REGION: process.env.BUCKET_REGION,
+    IDENTITY_POOL_ID: process.env.IDENTITY_POOL_ID,
+    BUCKET_NAME: process.env.BUCKET_NAME
   };
 
   if (environment === 'development') {

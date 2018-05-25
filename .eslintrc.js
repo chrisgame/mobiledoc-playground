@@ -35,5 +35,8 @@ module.exports = {
         node: true
       }
     }
-  ]
+  ],
+  globals: {
+    AWS: true
+  }
 };

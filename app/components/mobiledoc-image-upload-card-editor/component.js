@@ -1,5 +1,6 @@
 import Component from '@ember/component';
 import $ from 'jquery';
+import ENV from 'mobiledoc-playground/config/environment';
 
 export default Component.extend({
   //Attrs
