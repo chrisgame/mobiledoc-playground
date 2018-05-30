@@ -8,13 +8,17 @@
       as |editor|}}
       {{mobiledoc-toolbar editor=editor}}
       {{#if textSelected}}
-        {{#mobiledoc-markup-button editor=editor for="b"}}
-          Bold
-        {{/mobiledoc-markup-button}}
-        {{#mobiledoc-markup-button editor=editor for="em"}}
-          Italic
-        {{/mobiledoc-markup-button}}
-        {{mobiledoc-link-button editor=editor}}
+        {{#tether-to-selection}}
+          <div>
+            {{#mobiledoc-markup-button editor=editor for="b"}}
+              Bold
+            {{/mobiledoc-markup-button}}
+            {{#mobiledoc-markup-button editor=editor for="em"}}
+              Italic
+            {{/mobiledoc-markup-button}}
+            {{mobiledoc-link-button editor=editor}}
+          </div>
+        {{/tether-to-selection}}
       {{/if}}
 
       {{#mobiledoc-section-button editor=editor for="h1"}}
