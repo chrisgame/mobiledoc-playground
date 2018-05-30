@@ -6,7 +6,6 @@
       did-create-editor=(action 'mobiledocEditorWasCreated')
       on-change=(action 'mobiledocWasUpdated')
       as |editor|}}
-      {{mobiledoc-toolbar editor=editor}}
       {{#if textSelected}}
         {{#tether-to-selection}}
           <div>
