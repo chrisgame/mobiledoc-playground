@@ -4,7 +4,7 @@ import Renderer from 'mobiledoc-text-renderer';
 
 export default Controller.extend({
   outputType: undefined,
-  mobiledocExample: null,
+  mobiledocExample: undefined,
   textSelected: false,
 
   init() {
