@@ -5,7 +5,7 @@ import createComponentCard from 'ember-mobiledoc-editor/utils/create-component-c
 
 export default Controller.extend({
   outputType: undefined,
-  mobiledocExample: null,
+  mobiledocExample: undefined,
   textSelected: false,
 
   init() {
