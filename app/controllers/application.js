@@ -4,11 +4,13 @@ import Renderer from 'mobiledoc-text-renderer';
 import createComponentCard from 'ember-mobiledoc-editor/utils/create-component-card';
 
 export default Controller.extend({
+  outputType: undefined,
   mobiledocExample: null,
   textSelected: false,
 
   init() {
     this._super(...arguments);
+    this.set('outputType', 'raw');
     this.set(
       'mobiledocExample',
       {
@@ -32,6 +34,10 @@ export default Controller.extend({
       'mobiledoc-image-upload-card'
     ];
   }),
+
+  isOutputTypeRaw: computed.equal('outputType', 'raw'),
+  isOutputTypeRendered: computed.equal('outputType', 'rendered'),
+  isOutputTypeText: computed.equal('outputType', 'text'),
 
   mobiledocExampleInText: computed('mobiledocExample', function() {
     let mobiledocExample = this.get('mobiledocExample');
