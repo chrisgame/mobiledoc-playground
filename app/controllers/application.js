@@ -3,11 +3,13 @@ import { computed } from '@ember/object';
 import Renderer from 'mobiledoc-text-renderer';
 
 export default Controller.extend({
+  outputType: undefined,
   mobiledocExample: null,
   textSelected: false,
 
   init() {
     this._super(...arguments);
+    this.set('outputType', 'raw');
     this.set(
       'mobiledocExample',
       {
