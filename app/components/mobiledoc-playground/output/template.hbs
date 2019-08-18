@@ -1,9 +1,9 @@
-<div class="output-type-button-bar">
-  <button class="output-type-button" onClick={{action (mut outputType) 'raw'}}>Raw</button>
-  <button class="output-type-button" onClick={{action (mut outputType) 'rendered'}}>Rendered</button>
-  <button class="output-type-button" onClick={{action (mut outputType) 'text'}}>Text</button>
+<div local-class="output-type-button-bar">
+  <button local-class="output-type-button" onClick={{action (mut outputType) 'raw'}}>Raw</button>
+  <button local-class="output-type-button" onClick={{action (mut outputType) 'rendered'}}>Rendered</button>
+  <button local-class="output-type-button" onClick={{action (mut outputType) 'text'}}>Text</button>
 </div>
-<div class="output-contents">
+<div local-class="output-contents">
   {{#if isOutputTypeRaw}}
     {{as-json mobiledoc}}
   {{else if isOutputTypeRendered}}

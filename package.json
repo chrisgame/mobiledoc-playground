@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "aws-sdk": "^2.245.1",
+    "ember-css-modules": "^1.2.1",
     "ember-mobiledoc-editor": "^0.5.13"
   }
 }

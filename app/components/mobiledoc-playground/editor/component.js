@@ -6,6 +6,8 @@ export default Component.extend({
   mobiledoc: undefined,
   textSelected: false,
 
+  tagName: '',
+
   cards: computed(function() {
     return [
       createComponentCard('mobiledoc-image-upload-card')

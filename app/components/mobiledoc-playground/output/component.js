@@ -7,6 +7,8 @@ export default Component.extend({
   mobiledoc: undefined,
   outputType: undefined,
 
+  tagName: '',
+
   init() {
     this._super(...arguments);
     this.set('outputType', 'raw');

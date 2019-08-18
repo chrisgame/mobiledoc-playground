@@ -1,0 +1,18 @@
+.output-type-button-bar  {
+  padding: 9px 0;
+}
+
+.output-type-button {
+  border: none;
+  border-right: 1px solid;
+}
+
+.output-type-button:last-of-type {
+  border: none;
+}
+
+.output-contents  {
+  padding: 9px;
+  border: 1px solid black;
+  overflow-y: scroll;
+}
