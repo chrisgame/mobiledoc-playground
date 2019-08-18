@@ -1,0 +1,8 @@
+.editor-toolbar {
+  position: fixed;
+  z-index: 1;
+}
+
+:global(.mobiledoc-editor) {
+  padding-top: 1px;
+}

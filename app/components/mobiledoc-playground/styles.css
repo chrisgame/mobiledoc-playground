@@ -1,0 +1,19 @@
+.playground-container {
+  height: 97vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+  grid-row-gap: 9px;
+}
+
+.editor-container {
+  padding: 9px;
+  border: 1px solid black;
+  overflow-y: scroll;
+}
+
+.output-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 36px auto;
+}

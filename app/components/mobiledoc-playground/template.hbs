@@ -1,11 +1,11 @@
-<div class="playground">
-  <div class="editor-container">
+<div local-class="playground-container">
+  <div local-class="editor-container">
     {{mobiledoc-playground/editor
       mobiledoc=mobiledoc
       onMobiledocUpdated=(action 'updateMobiledoc')
     }}
   </div>
-  <div class="output-container">
+  <div local-class="output-container">
     {{mobiledoc-playground/output
       mobiledoc=mobiledoc
     }}
