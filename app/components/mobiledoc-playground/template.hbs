@@ -1,0 +1,13 @@
+<div class="playground">
+  <div class="editor-container">
+    {{mobiledoc-playground/editor
+      mobiledoc=mobiledoc
+      onMobiledocUpdated=(action 'updateMobiledoc')
+    }}
+  </div>
+  <div class="output-container">
+    {{mobiledoc-playground/output
+      mobiledoc=mobiledoc
+    }}
+  </div>
+</div>

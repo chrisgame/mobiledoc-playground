@@ -1,0 +1,17 @@
+<div class="output-type-button-bar">
+  <button class="output-type-button" onClick={{action (mut outputType) 'raw'}}>Raw</button>
+  <button class="output-type-button" onClick={{action (mut outputType) 'rendered'}}>Rendered</button>
+  <button class="output-type-button" onClick={{action (mut outputType) 'text'}}>Text</button>
+</div>
+<div class="output-contents">
+  {{#if isOutputTypeRaw}}
+    {{as-json mobiledoc}}
+  {{else if isOutputTypeRendered}}
+    {{#if mobiledoc}}
+      {{render-mobiledoc
+        mobiledoc=mobiledoc}}
+      {{/if}}
+    {{else if isOutputTypeText}}
+      {{mobiledocInText}}
+    {{/if}}
+</div>
