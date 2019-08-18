@@ -1,0 +1,41 @@
+{{#mobiledoc-editor
+  mobiledoc=mobiledoc
+  cards=cards
+  did-create-editor=(action 'mobiledocEditorWasCreated')
+  on-change=(action 'mobiledocWasUpdated')
+  as |editor|}}
+  {{#if textSelected}}
+    {{#tether-to-selection}}
+      <div>
+        {{#mobiledoc-markup-button editor=editor for="b"}}
+          Bold
+        {{/mobiledoc-markup-button}}
+        {{#mobiledoc-markup-button editor=editor for="em"}}
+          Italic
+        {{/mobiledoc-markup-button}}
+        {{mobiledoc-link-button editor=editor}}
+      </div>
+    {{/tether-to-selection}}
+  {{/if}}
+
+  <div class="editor-toolbar">
+    {{#mobiledoc-section-button editor=editor for="h1"}}
+      Heading
+    {{/mobiledoc-section-button}}
+    {{#mobiledoc-section-button editor=editor for="h2"}}
+      Subheading
+    {{/mobiledoc-section-button}}
+    {{#mobiledoc-section-button editor=editor for="blockquote"}}
+      Blockquote
+    {{/mobiledoc-section-button}}
+    {{#mobiledoc-section-button editor=editor for="ul"}}
+      Unordered List
+    {{/mobiledoc-section-button}}
+    {{#mobiledoc-section-button editor=editor for="ol"}}
+      Ordered List
+    {{/mobiledoc-section-button}}
+    {{#mobiledoc-image-button editor=editor}}
+      Image
+    {{/mobiledoc-image-button}}
+  </div>
+{{/mobiledoc-editor}}
