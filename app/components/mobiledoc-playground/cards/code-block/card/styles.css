@@ -1,0 +1,11 @@
+div :global(.__mobiledoc-editor) .pre-block,
+div :global(.__rendered-mobiledoc-card) .pre-block {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  overflow: auto;
+  margin-top: 18px;
+  padding: 6px 10px;
+  border-radius: 3px;
+  font-size: 13px;
+  line-height: 1.2em;
+}
