@@ -1,0 +1,12 @@
+<div local-class="code-editor">
+  {{mobiledoc-editor
+    placeholder="Start writing your code sample here"
+    mobiledoc=payload.codeBlockContent
+    on-change=(action (mut codeBlockContent))
+  }}
+  <div local-class="button-bar">
+    <button title="Cancel code block creation" onclick={{action "cancelCard"}}>Cancel</button>
+    <button title="Save code block" onclick={{action "saveCard"}}>Save</button>
+  </div>
+</div>
+
