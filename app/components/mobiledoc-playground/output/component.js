@@ -14,6 +14,12 @@ export default Component.extend({
     this.set('outputType', 'raw');
   },
 
+  cardNames: computed(function() {
+    return [
+      'mobiledoc-playground/cards/code-block/card'
+    ];
+  }),
+
   isOutputTypeRaw: computed.equal('outputType', 'raw'),
   isOutputTypeRendered: computed.equal('outputType', 'rendered'),
   isOutputTypeText: computed.equal('outputType', 'text'),
