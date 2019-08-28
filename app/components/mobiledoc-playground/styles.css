@@ -1,3 +1,10 @@
+:global(.__mobiledoc-editor) {
+  font-family: arial;
+  font-size: 1em;
+  line-height: 1.6em;
+  margin: 1.6em 0;
+}
+
 .playground-container {
   height: 97vh;
   display: grid;

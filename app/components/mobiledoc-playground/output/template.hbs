@@ -5,13 +5,19 @@
 </div>
 <div local-class="output-contents">
   {{#if isOutputTypeRaw}}
-    {{as-json mobiledoc}}
+    <pre local-class="raw-output">
+{{as-json mobiledoc}}
+    </pre>
   {{else if isOutputTypeRendered}}
     {{#if mobiledoc}}
-      {{render-mobiledoc
-        mobiledoc=mobiledoc}}
-      {{/if}}
-    {{else if isOutputTypeText}}
-      {{mobiledocInText}}
+      <div local-class="rendered-dom-output">
+        {{render-mobiledoc
+          mobiledoc=mobiledoc}}
+      </div>
     {{/if}}
+  {{else if isOutputTypeText}}
+    <pre local-class="rendered-text-output">
+{{mobiledocInText}}
+    </pre>
+  {{/if}}
 </div>

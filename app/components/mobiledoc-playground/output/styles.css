@@ -16,3 +16,15 @@
   border: 1px solid black;
   overflow-y: scroll;
 }
+
+.rendered-dom-output {
+  font-family: arial;
+  font-size: 1em;
+  line-height: 1.6em;
+}
+
+.raw-output,
+.rendered-text-output {
+  font-family: monospace;
+  white-space: pre;
+}
