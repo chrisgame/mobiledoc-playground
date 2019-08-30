@@ -2,6 +2,7 @@ import Component from '@ember/component';
 import { computed } from '@ember/object';
 
 import Renderer from 'mobiledoc-text-renderer';
+import codeBlockTextRenderer from 'mobiledoc-playground/components/mobiledoc-playground/cards/code-block/card/text-renderer';
 
 export default Component.extend({
   mobiledoc: undefined,
@@ -20,13 +21,20 @@ export default Component.extend({
     ];
   }),
 
+  cardsInText() {
+    return [
+      codeBlockTextRenderer
+    ];
+  },
+
   isOutputTypeRaw: computed.equal('outputType', 'raw'),
   isOutputTypeRendered: computed.equal('outputType', 'rendered'),
   isOutputTypeText: computed.equal('outputType', 'text'),
 
   mobiledocInText: computed('mobiledoc', function() {
     let mobiledoc = this.get('mobiledoc');
-    let renderer = new Renderer();
+    let cardsInText = this.cardsInText();
+    let renderer = new Renderer({ cards: cardsInText });
 
     return mobiledoc ? renderer.render(mobiledoc).result : '';
   }),
