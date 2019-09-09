@@ -1,1 +1,9 @@
-<img local-class="logo" src={{payload.imageUrl}}>
+{{#if showText}}
+  {{value}}
+{{else if showEmoji}}
+  <span local-class="emoji">
+    {{payload.emoji}}
+  </span>
+{{else}}
+  <img local-class="logo" src={{payload.imageUrl}}>
+{{/if}}
