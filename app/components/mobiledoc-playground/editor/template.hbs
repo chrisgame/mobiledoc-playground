@@ -1,6 +1,7 @@
 {{#mobiledoc-editor
   mobiledoc=mobiledoc
   on-change=onMobiledocUpdated
+  did-create-editor=(action 'mobiledocEditorWasCreated')
   as |editor|}}
 
   <div local-class="editor-toolbar">
