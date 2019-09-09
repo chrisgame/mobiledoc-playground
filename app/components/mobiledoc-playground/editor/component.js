@@ -32,7 +32,8 @@ export default Component.extend({
             'mobiledoc-playground/atoms/logo/atom',
             'ember',
             {
-              imageUrl: 'https://emberjs.com/images/brand/ember_Ember-Dark-80b69143e1da02507f58f8de460a4072.png'
+              imageUrl: 'https://emberjs.com/images/brand/ember_Ember-Dark-80b69143e1da02507f58f8de460a4072.png',
+              emoji: '🐹'
             }
           );
           editor.insertText(' ');
