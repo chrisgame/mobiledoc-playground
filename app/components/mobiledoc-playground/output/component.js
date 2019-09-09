@@ -14,6 +14,12 @@ export default Component.extend({
     this.set('outputType', 'raw');
   },
 
+  atomNames: computed(function() {
+    return [
+      'mobiledoc-playground/atoms/logo/atom'
+    ];
+  }),
+
   isOutputTypeRaw: computed.equal('outputType', 'raw'),
   isOutputTypeRendered: computed.equal('outputType', 'rendered'),
   isOutputTypeText: computed.equal('outputType', 'text'),

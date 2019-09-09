@@ -12,7 +12,8 @@
     {{#if mobiledoc}}
       <div local-class="rendered-dom-output">
         {{render-mobiledoc
-          mobiledoc=mobiledoc}}
+          mobiledoc=mobiledoc
+          atomNames=atomNames}}
       </div>
     {{/if}}
   {{else if isOutputTypeText}}
