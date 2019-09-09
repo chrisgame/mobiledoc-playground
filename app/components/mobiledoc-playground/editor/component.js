@@ -1,10 +1,19 @@
 import Component from '@ember/component';
+import { computed } from '@ember/object';
+
+import createComponentAtom from 'ember-mobiledoc-editor/utils/create-component-atom';
 
 export default Component.extend({
   mobiledoc: undefined,
   onMobiledocUpdated: () => {},
 
   tagName: '',
+
+  atoms: computed(function() {
+    return [
+      createComponentAtom('mobiledoc-playground/atoms/logo/atom')
+    ];
+  }),
 
   actions: {
     mobiledocEditorWasCreated(editor) {
