@@ -1,0 +1,7 @@
+:global(.__mobiledoc-editor) img.logo,
+:global(.__rendered-mobiledoc-atom) img.logo {
+  display: inline;
+  height: 1.2em;
+  position: relative;
+  top: 1px;
+}
