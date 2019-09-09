@@ -12,12 +12,19 @@ export default Component.extend({
   init() {
     this._super(...arguments);
     this.set('outputType', 'raw');
+    this.set('logoAtomOptions', 'image');
   },
 
   atomNames: computed(function() {
     return [
       'mobiledoc-playground/atoms/logo/atom'
     ];
+  }),
+
+  cardOptions: computed('logoAtomOptions', function() {
+    return {
+      logoAtomOptions: this.get('logoAtomOptions')
+    };
   }),
 
   isOutputTypeRaw: computed.equal('outputType', 'raw'),

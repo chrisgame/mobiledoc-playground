@@ -1,4 +1,10 @@
-.output-type-button-bar  {
+.output-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.output-type-button-bar,
+.logo-atom-options {
   padding: 9px 0;
 }
 
@@ -9,6 +15,12 @@
 
 .output-type-button:last-of-type {
   border: none;
+}
+
+.logo-atom-options-label,
+.logo-atom-options-input {
+  font-family: system-ui;
+  font-size: 11px;
 }
 
 .output-contents  {

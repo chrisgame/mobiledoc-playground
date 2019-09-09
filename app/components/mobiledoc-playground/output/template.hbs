@@ -1,7 +1,13 @@
-<div local-class="output-type-button-bar">
-  <button local-class="output-type-button" onClick={{action (mut outputType) 'raw'}}>Raw</button>
-  <button local-class="output-type-button" onClick={{action (mut outputType) 'rendered'}}>Rendered</button>
-  <button local-class="output-type-button" onClick={{action (mut outputType) 'text'}}>Text</button>
+<div local-class="output-controls">
+  <div local-class="output-type-button-bar">
+    <button local-class="output-type-button" onClick={{action (mut outputType) 'raw'}}>Raw</button>
+    <button local-class="output-type-button" onClick={{action (mut outputType) 'rendered'}}>Rendered</button>
+    <button local-class="output-type-button" onClick={{action (mut outputType) 'text'}}>Text</button>
+  </div>
+  <div local-class="logo-atom-options">
+    <label local-class="logo-atom-options-label" for=logoAtomOptions">Logo Atom Options</label>
+    {{input local-class="logo-atom-options-input" id=logoAtomOptions type="text" value=logoAtomOptions key-up=(action (mut logoAtomOptions))}}
+  </div>
 </div>
 <div local-class="output-contents">
   {{#if isOutputTypeRaw}}
@@ -13,6 +19,7 @@
       <div local-class="rendered-dom-output">
         {{render-mobiledoc
           mobiledoc=mobiledoc
+          cardOptions=cardOptions
           atomNames=atomNames}}
       </div>
     {{/if}}
