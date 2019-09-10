@@ -2,19 +2,6 @@
   mobiledoc=mobiledoc
   on-change=onMobiledocUpdated
   as |editor|}}
-  {{#if textSelected}}
-    {{#tether-to-selection}}
-      <div>
-        {{#mobiledoc-markup-button editor=editor for="b"}}
-          Bold
-        {{/mobiledoc-markup-button}}
-        {{#mobiledoc-markup-button editor=editor for="em"}}
-          Italic
-        {{/mobiledoc-markup-button}}
-        {{mobiledoc-link-button editor=editor}}
-      </div>
-    {{/tether-to-selection}}
-  {{/if}}
 
   <div local-class="editor-toolbar">
     {{#mobiledoc-section-button editor=editor for="h1"}}
@@ -33,4 +20,5 @@
       Ordered List
     {{/mobiledoc-section-button}}
   </div>
+
 {{/mobiledoc-editor}}
